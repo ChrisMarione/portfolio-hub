@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bard Ray · Portfolio Hub</title>
+  <title>Chris Marione Lasala · portfolio hub (reused blog)</title>
   <style>
-    /* ===== RESET & BASE ===== */
+    /* ---------- RESET / BASE ---------- */
     * {
       margin: 0;
       padding: 0;
@@ -14,7 +14,7 @@
 
     body {
       background: #ece4d9;
-      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       padding: 24px 20px;
       color: #2b2b2b;
     }
@@ -45,7 +45,7 @@
       border: 1px solid #f0dccc;
     }
 
-    /* ===== HEADER ===== */
+    /* ---------- HEADER (child selector > ) ---------- */
     .page-header {
       display: flex;
       flex-wrap: wrap;
@@ -56,7 +56,7 @@
       margin-bottom: 30px;
     }
 
-    .page-header > h1 {
+    .page-header > h1 {   /* direct child selector */
       font-size: 2.8rem;
       font-weight: 800;
       background: linear-gradient(135deg, #34281f, #6c4f3a);
@@ -99,14 +99,14 @@
       border-color: #4d3829;
     }
 
-    /* ===== TWO COLUMN LAYOUT ===== */
+    /* ---------- FLEX LAYOUT (main + sidebar) ---------- */
     .two-columns {
       display: flex;
       gap: 30px;
       margin: 25px 0 20px;
     }
 
-    /* MAIN PROJECTS AREA */
+    /* MAIN (projects area) */
     .projects-region {
       flex: 2.6;
       background: #fffaf5;
@@ -124,7 +124,7 @@
       color: #36281d;
     }
 
-    /* PROJECT CARDS */
+    /* project cards — flex container */
     .card-grid {
       display: flex;
       flex-wrap: wrap;
@@ -153,6 +153,7 @@
       margin-bottom: 6px;
     }
 
+    /* adjacent sibling selector: h2 + .meta-line */
     .project-card h2 + .meta-line {
       font-size: 0.9rem;
       color: #a47459;
@@ -163,6 +164,7 @@
       gap: 12px;
     }
 
+    /* descendant selector: any p inside .project-card */
     .project-card p {
       color: #3f342d;
       margin: 12px 0 20px;
@@ -214,7 +216,7 @@
       color: #5a3f30;
     }
 
-    /* ===== SIDEBAR ===== */
+    /* ---------- SIDEBAR ---------- */
     .sidebar-panel {
       flex: 1.2;
       background: #fdf3ea;
@@ -249,7 +251,9 @@
       color: #4e3829;
     }
 
-    .side-widget ul {
+    /* general sibling selector: h3 ~ ul (or .link-bunch) */
+    .side-widget h3 ~ ul,
+    .side-widget h3 ~ .link-bunch {
       list-style: none;
       margin-top: 8px;
     }
@@ -288,6 +292,7 @@
       border: 1px solid #c1a189;
     }
 
+    /* small form */
     .subscribe-group {
       display: flex;
       flex-wrap: wrap;
@@ -312,7 +317,7 @@
       cursor: pointer;
     }
 
-    /* ===== FOOTER ===== */
+    /* ---------- FOOTER ---------- */
     .page-footer {
       border-top: 3px solid #ddc7b5;
       margin-top: 35px;
@@ -365,10 +370,10 @@
 
   <div class="container">
 
-    <!-- HEADER -->
+    <!-- header – child selector example (.page-header > h1) -->
     <header class="page-header">
       <div>
-        <h1>BARD RAY · PORTFOLIO</h1>
+        <h1>Chris Marione Lasala · PORTFOLIO</h1>
         <p class="head-desc">semantic blog reused · flex + combinators · projects hub</p>
       </div>
       <nav class="main-nav" aria-label="main">
@@ -381,26 +386,27 @@
       </nav>
     </header>
 
-    <!-- MAIN TWO COLUMN LAYOUT -->
+    <!-- main flex row (two columns) -->
     <div class="two-columns" id="main-projects">
 
-      <!-- MAIN PROJECTS SECTION -->
+      <!-- MAIN: all project cards -->
       <main class="projects-region">
         <h2 class="region-title">📂 my activities · open in new tab</h2>
 
         <div class="card-grid">
-          <!-- STUDENT ID CARD -->
+          <!-- 1️⃣ student ID / library card -->
           <article class="project-card">
             <h2>🆔 student ID card</h2>
             <div class="meta-line">activity 1 · library card</div>
             <p>Semantic HTML with student photo, library access, bio. Full roadmap structure.</p>
             <footer class="card-actions">
               <span class="badge">HTML</span>
+              <!-- target="_blank" required -->
               <a href="student-id.html" class="btn btn-primary" target="_blank" rel="noopener">open ↗</a>
             </footer>
           </article>
 
-          <!-- CLASS SCHEDULE -->
+          <!-- 2️⃣ class schedule table -->
           <article class="project-card">
             <h2>📅 class schedule</h2>
             <div class="meta-line">activity 2 · table</div>
@@ -411,7 +417,7 @@
             </footer>
           </article>
 
-          <!-- VALENTINE CARD -->
+          <!-- 3️⃣ valentine special (Angelica) -->
           <article class="project-card">
             <h2>💘 valentine card</h2>
             <div class="meta-line">special activity · Angelica</div>
@@ -421,70 +427,36 @@
               <a href="valentine-card.html" class="btn btn-primary" target="_blank" rel="noopener">open ↗</a>
             </footer>
           </article>
-
-          <!-- SEMANTIC BLOG -->
-          <article class="project-card">
-            <h2>📝 semantic blog</h2>
-            <div class="meta-line">flex · combinators</div>
-            <p>Original layout – now converted into portfolio. Uses child, adjacent, general, descendant selectors.</p>
-            <footer class="card-actions">
-              <span class="badge">CSS</span>
-              <a href="semantic-blog.html" class="btn btn-primary" target="_blank" rel="noopener">open ↗</a>
-            </footer>
-          </article>
-
-          <!-- FLEX GALLERY EXTRA -->
-          <article class="project-card">
-            <h2>🖼️ flex gallery</h2>
-            <div class="meta-line">extra showcase</div>
-            <p>Responsive image cards with flex-wrap — practice project.</p>
-            <footer class="card-actions">
-              <span class="badge">flex</span>
-              <a href="flex-gallery.html" class="btn btn-primary" target="_blank" rel="noopener">open ↗</a>
-            </footer>
-          </article>
-
-          <!-- GRID LAB EXTRA -->
-          <article class="project-card">
-            <h2>🧩 css grid lab</h2>
-            <div class="meta-line">bonus</div>
-            <p>Simple grid layout with nested flex elements.</p>
-            <footer class="card-actions">
-              <span class="badge">grid</span>
-              <a href="grid-lab.html" class="btn btn-primary" target="_blank" rel="noopener">open ↗</a>
-            </footer>
-          </article>
         </div>
 
+        <!-- extra note: all open in new tab -->
         <p style="background:#f4e9e0; border-radius:60px; padding:10px 20px; margin-top:25px;">
-          ✅ every “open” link uses <code>target="_blank"</code> → opens in new tab.
+          ✅ every “open” link uses <code>target="_blank"</code> → new tab.
         </p>
       </main>
 
-      <!-- SIDEBAR -->
+      <!-- SIDEBAR (with direct activity links) -->
       <aside class="sidebar-panel">
-        <h2>🧑‍🎓 bard</h2>
+        <h2>🧑‍🎓 Marione</h2>
 
-        <!-- ABOUT WIDGET -->
+        <!-- about widget -->
         <section class="side-widget">
           <h3>📌 about</h3>
           <p>IT student · web systems. Reused blog to host all activities. Flex & combinators demonstrated.</p>
         </section>
 
-        <!-- DIRECT ACTIVITY LINKS -->
+        <!-- ===== DIRECT REQUIRED ACTIVITY LINKS (target="_blank") ===== -->
         <section class="side-widget">
           <h3>🔗 activity links</h3>
+          <!-- general sibling selector applies to ul after h3 -->
           <ul>
             <li>📘 <a href="student-id.html" target="_blank"><strong>Activity 1:</strong> student ID card</a></li>
             <li>📊 <a href="class-schedule.html" target="_blank"><strong>Activity 2:</strong> class schedule table</a></li>
             <li>💌 <a href="valentine-card.html" target="_blank"><strong>Special 1:</strong> Valentine (Angelica)</a></li>
-            <li>📝 <a href="semantic-blog.html" target="_blank"><strong>Semantic blog</strong> (original)</a></li>
-            <li>🖼️ <a href="flex-gallery.html" target="_blank">flex gallery extra</a></li>
-            <li>🧩 <a href="grid-lab.html" target="_blank">grid lab extra</a></li>
           </ul>
         </section>
 
-        <!-- TAG CLOUD -->
+        <!-- tag cloud -->
         <section class="side-widget">
           <h3>🏷️ tags</h3>
           <div class="cloud-links">
@@ -497,14 +469,14 @@
           </div>
         </section>
 
-        <!-- VALENTINE NOTE -->
+        <!-- Angelica special mention -->
         <section class="side-widget">
           <h3>💬 valentine note</h3>
           <p>💕 <strong>Angelica</strong> – the runaway button card is for you! ❤️</p>
           <div style="font-size: 2rem;">🧸 💌 🧸</div>
         </section>
 
-        <!-- SUBSCRIBE FORM -->
+        <!-- dummy subscribe -->
         <section class="side-widget">
           <h3>✉️ portfolio</h3>
           <div class="subscribe-group">
@@ -515,9 +487,9 @@
       </aside>
     </div>
 
-    <!-- FOOTER -->
+    <!-- footer with deployment info -->
     <footer class="page-footer">
-      <div>© 2026 · bard ray · <span style="color:#735f4f;">hosted on gh-pages & netlify</span></div>
+      <div>© 2026 · Chris Marione Lasala · <span style="color:#735f4f;">hosted on gh-pages & netlify</span></div>
       <ul class="footer-links">
         <li><a href="#">github</a></li>
         <li><a href="#">netlify</a></li>
@@ -532,6 +504,6 @@
     <div class="footnote">
       ⚡ ready for deployment · all project links use target="_blank"
     </div>
-  </div>
+  </div> <!-- end container -->
 </body>
 </html>
