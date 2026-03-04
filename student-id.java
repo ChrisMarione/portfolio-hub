@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student ID Card for University of Web Development">
+    <title>Student ID Card | University of Web Development</title>
+</head>
+<body>
+    <!-- Main header section -->
+    <header id="main-header">
+        <h1>University of Web Development</h1>
+        <h2>Student Identification & Library Access Card</h2>
+        <p><em>"Advancing Digital Education Since 2009"</em></p>
+        <hr>
+    </header>
+    
+    <!-- Main content section -->
+    <main class="card-content">
+        <!-- Student photo and basic info section -->
+        <section id="student-photo-section">
+            <h3>Student Photo & Basic Information</h3>
+            <div class="photo-container">
+                <!-- Using figure for student photo with caption -->
+                <figure>
+                    <img src="https://via.placeholder.com/150x180/4a6fa5/ffffff?text=Student+Photo" 
+                         alt="Student photo of Bard Ray" 
+                         width="150" height="180">
+                    <figcaption><small>Official Student Photo</small></figcaption>
+                </figure>
+            </div>
+            
+            <div class="basic-info">
+                <p><strong>Full Name:</strong> <mark>Bard Ray</mark></p>
+                <p><strong>Student ID:</strong> <strong>UD-2025-90745</strong></p>
+                <p><strong>Date of Birth:</strong> December 19, 2005</p>
+                <p><strong>Nationality:</strong> <abbr title="United States of America">USA</abbr></p>
+            </div>
+        </section>
+        
+        <!-- Academic information section -->
+        <section id="academic-info">
+            <h3>Academic Information</h3>
+            
+            <div class="academic-details">
+                <p>
+                    <strong>Faculty:</strong> School of Computing & Information Sciences
+                </p>
+                <p>
+                    <strong>Program:</strong> Bachelor of Science in 
+                    <em>Computer Science</em> with <mark>Web Development</mark> concentration
+                </p>
+                <p>
+                    <strong>Current Year:</strong> Year <sup>3</sup> / Semester <sub>2</sub>
+                </p>
+                <p>
+                    <strong>Academic Status:</strong> 
+                    <span class="status" style="color: green;">Full-time (12+ credits)</span>
+                </p>
+                <p>
+                    <strong>Expected Graduation:</strong> May <del>2025</del> <ins>2026</ins>
+                </p>
+            </div>
+            
+            <!-- Using unordered list for courses -->
+            <div class="current-courses">
+                <h4>Current Courses (Spring 2025):</h4>
+                <ul>
+                    <li>CS 301 - Advanced Web Technologies</li>
+                    <li>CS 315 - Human-Computer Interaction</li>
+                    <li>CS 320 - Database Systems</li>
+                    <li>MATH 280 - Discrete Mathematics</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Contact and library section -->
+        <section id="contact-library">
+            <h3>Contact & Library Information</h3>
+            
+            <div class="contact-details">
+                <!-- Using address element for contact info -->
+                <address>
+                    <p><strong>Email:</strong> 
+                        <a href="mailto:bard.ray@university.edu" class="contact-link">
+                            bard.ray@university.edu
+                        </a>
+                    </p>
+                    <p><strong>Student Portal:</strong> 
+                        <a href="https://portal.uwd.edu/students" target="_blank">
+                            https://portal.uwd.edu
+                        </a>
+                    </p>
+                    <p><strong>Phone:</strong> (555) 907-4545</p>
+                    <p><strong>Campus Address:</strong> Student Dorm C, Room 307</p>
+                </address>
+            </div>
+            
+            <div class="library-info">
+                <h4>Library Access Information</h4>
+                <p><strong>Library Card #:</strong> LIB-90745</p>
+                <p><strong>Borrowing Limit:</strong> 15 items</p>
+                <p><strong>Access Level:</strong> Full (Includes digital resources)</p>
+                <p><strong>Library PIN:</strong> ••••</p>
+            </div>
+        </section>
+        
+        <!-- Bio and additional information -->
+        <section id="bio-section">
+            <h3>Student Biography</h3>
+            <!-- Using blockquote for student's statement -->
+            <blockquote cite="#">
+                "My goal is to create web experiences that are beautiful, informative, and accessible to everyone, 
+                regardless of their abilities or technology."
+            </blockquote>
+            
+            <div class="bio-content">
+                <p>
+                    Bard is a passionate <strong>web development</strong> student with particular 
+                    interest in <em>accessibility standards</em> and <em>responsive design</em>. 
+                    He serves as the President of the Web Development Club and volunteers as a 
+                    peer tutor for introductory HTML/CSS courses.
+                </p>
+                <p>
+                    His current research project focuses on improving screen reader compatibility 
+                    with modern JavaScript frameworks. He has contributed to several open-source 
+                    accessibility projects and presented at the 2024 University Tech Symposium.
+                </p>
+            </div>
+            
+            <!-- Using ordered list for achievements -->
+            <div class="achievements">
+                <h4>Recent Achievements:</h4>
+                <ol>
+                    <li>Dean's List - Fall 2024</li>
+                    <li>Web Accessibility Hackathon - 1st Place</li>
+                    <li>University Coding Competition - Finalist</li>
+                </ol>
+            </div>
+        </section>
+        
+        <!-- Emergency contact information -->
+        <aside id="emergency-contact">
+            <h4>Emergency Contact</h4>
+            <p><strong>Contact Person:</strong> Robert Ray (Father)</p>
+            <p><strong>Emergency Phone:</strong> (555) 987-9074</p>
+            <p><strong>Relationship:</strong> Parent/Guardian</p>
+        </aside>
+        
+        <!-- Important notices -->
+        <article id="important-notices">
+            <h3>Important Notices</h3>
+            <div class="notices">
+                <p>
+                    <strong>Card Validity:</strong> This card is valid from 
+                    <time datetime="2024-09-05">September 5, 2024</time> to 
+                    <time datetime="2025-08-30">August 30, 2025</time>.
+                </p>
+                <p>
+                    <strong>Usage:</strong> This card serves as:
+                </p>
+                <!-- Using definition list for card purposes -->
+                <dl>
+                    <dt>Student Identification</dt>
+                    <dd>Required for campus access, exams, and student services</dd>
+                    
+                    <dt>Library Access Card</dt>
+                    <dd>Provides borrowing privileges at all campus libraries</dd>
+                    
+                    <dt>Printing Account</dt>
+                    <dd>Linked to student printing credits ($50 semester allowance)</dd>
+                </dl>
+                <p>
+                    <small>
+                        <strong>Report lost/stolen cards immediately</strong> to Campus Security 
+                        (ext. 911) or the Registrar's Office.
+                    </small>
+                </p>
+            </div>
+        </article>
+    </main>
+    
+    <!-- Footer section -->
+    <footer id="card-footer">
+        <hr>
+        <div class="footer-content">
+            <p>
+                <q>This card is property of University of Web Development.</q>
+            </p>
+            <p>
+                <strong>Registrar's Office:</strong> 
+                <address>Administration Building, Room 101 | Mon-Fri 9am-5pm</address>
+            </p>
+            <p>
+                <sub>Issued: September 5, 2024 | Last Updated: December 19, 2024</sub>
+            </p>
+            <p>
+                <!-- Using code element for system info -->
+                <code>System: UWD-CardGen v3.2 | ID#: 90745-2024-12</code>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
